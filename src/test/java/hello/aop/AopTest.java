@@ -8,6 +8,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.aop.support.AopUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.context.annotation.Import;
 
 /**
  * (설명)
@@ -15,6 +16,12 @@ import org.springframework.boot.test.context.SpringBootTest;
  * Date : 2025-03-03
  */
 @Slf4j
+//@Import(AspectV1.class) //AspectV1 스프링 빈 등록
+//@Import(AspectV2.class)
+//@Import(AspectV3.class)
+//@Import(AspectV4.class)
+//@Import({AspectV5.LogAspect.class, AspectV5.TxAspect.class})
+@Import(AspectV6.class)
 @SpringBootTest
 public class AopTest {
     @Autowired
